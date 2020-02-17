@@ -12,6 +12,7 @@
 COUNT  = 100
 OFFSET = 1
 BATCH  = 0
+#LIMIT  = 1000
 
 # require
 from wos import WosClient
@@ -64,6 +65,7 @@ with WosClient() as client :
 		# increment and done, conditionally		
 		offset = offset + count
 		if ( offset > total ) : break
+		#if ( offset > LIMIT ) : break
 
 # done
 exit()
